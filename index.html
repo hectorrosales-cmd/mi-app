@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Risas</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f0f8ff; }
+        button { padding: 10px 20px; font-size: 18px; cursor: pointer; background-color: #ffcc00; border: none; border-radius: 5px; }
+        button:hover { background-color: #ffdb4d; }
+        #resultado { margin-top: 20px; font-size: 20px; font-weight: bold; color: #333; white-space: pre-line; }
+    </style>
+</head>
+<body>
+
+    <h2>¿Quieres reír un poco?</h2>
+    <button onclick="contarChiste()">¡Dime un chiste!</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        function contarChiste() {
+            const chistes = [
+                "— Profe, ¿cuál es el mayor enemigo de un programador en Honduras? \n— No es el bug, ni el cliente... es el transformador que explota en la esquina justo antes de que le des a Ctrl + S",
+                "—¿Por qué la profe siempre programa en modo oscuro y con el aire a 16 grados?. \n— Porque es tan blanca que si se refleja el brillo del monitor o sale al sol de mediodía, ¡se nos desintegra por exceso de luz!",
+                "¿Qué le dice una foca a otra foca? \n... ¿Nos enfocamos?",
+                "¿Cómo se dice 'pelo sucio' en chino? \n... Chin-champu.",
+                "¿Por qué los programadores odian la naturaleza? \n... Porque tiene demasiados bugs.",
+                "— Mesero, el filete tiene muchos nervios. \n— Normal, es que es la primera vez que se lo comen.",
+                "Había un hombre tan, tan, tan bajito... que se sentó en el borde de una moneda y le colgaban las piernas."
+            ];
+
+            const random = Math.floor(Math.random() * chistes.length);
+            document.getElementById('resultado').innerText = chistes[random];
+        }
+    </script>
+    
+</body>
+</html>
